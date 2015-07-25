@@ -1,0 +1,30 @@
+{
+  "name": "RUI",
+  "version": "1.0.0",
+  "description": "UI Components Library for WEB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iswanj/RUI.git"
+  },
+  "author": "Iswan Jumat <info@iswanjumat.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iswanj/RUI/issues"
+  },
+  "homepage": "https://github.com/iswanj/RUI",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-cache": "^0.2.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-uglify": "^1.2.0"
+  }
+}
