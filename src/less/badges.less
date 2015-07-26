@@ -6,71 +6,92 @@
 	font-weight: 500;
 	font-size: 10px;
 	margin: 0;
-	padding: 1px 5px 0 5px;
+	line-height: 1.33;
+	padding: 1px 5px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	.rounded(@border-radius-small);
+	&.no {
+		.rounded(@border-radius-base);
+		color: @sub-text;
 
-	.tc-label-o {
+		&.gold {
+			background: @brand-gold;
+			border: 1px solid @brand-gold;
+			color: @text;
+		}
+		&.silver {
+			background: @brand-silver;
+			border: 1px solid @brand-silver;
+			color: @text;
+		}
+		&.bronze {
+			background: @brand-bronze;
+			border: 1px solid @brand-bronze;
+			color: @text;
+		}
+	}
+
+	&.rui-label-o {
 		background-color: #fff;
 		border: 1px solid @brand-default;
 	}
 
 	//lable sizes
-	.tc-label-lg {
+	&.rui-label-lg {
 		font-size: 1.8em;
 		padding: 0 .3em;
 	}
 
 	//label colors
-	.tc-label-primary {
+	&.rui-label-primary {
 		background-color: @brand-primary;
 		border: 1px solid @brand-primary;
 		color: #fff;
 	}
-	.tc-label-primary-o {
+	&.rui-label-primary-o {
 		background-color: #fff;
 		border: 1px solid @brand-primary;
 		color: @brand-primary;
 	}
 
-	.tc-label-success {
+	&.rui-label-success {
 		background-color: @brand-success;
 		border: 1px solid @brand-success;
 		color: #fff;
 	}
-	.tc-label-success-o {
+	&.rui-label-success-o {
 		background-color: #fff;
 		border: 1px solid @brand-success;
 		color: @brand-success;
 	}
-	.tc-label-info {
+	&.rui-label-info {
 		background-color: @brand-info;
 		border: 1px solid @brand-info;
 		color: #fff;
 	}
-	.tc-label-info-o {
+	&.rui-label-info-o {
 		background-color: #fff;
 		border: 1px solid @brand-info;
 		color: @brand-info;
 	}
-	.tc-label-danger {
+	&.rui-label-danger {
 		background-color: @brand-danger;
 		border: 1px solid @brand-danger;
 		color: #fff;
 	}
-	.tc-label-danger-o {
+	&.rui-label-danger-o {
 		background-color: #fff;
 		border: 1px solid @brand-danger;
 		color: @brand-danger;
 	}
-	.tc-label-warning {
+	&.rui-label-warning {
 		background-color: @brand-warning;
 		border: 1px solid @brand-warning;
 		color: #fff;
 	}
-	.tc-label-warning-o {
+	&.rui-label-warning-o {
 		background-color: #fff;
 		border: 1px solid @brand-warning;
 		color: @brand-warning;
