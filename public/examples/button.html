@@ -8,9 +8,97 @@
 </head>
 <body>
 <h1>Buttons</h1>
-<p>Easily highlight your content by adding <code>&lt;span class="rui-badges"&gt;</code></p>
+<p>There are three different style buttons on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
 <p class="help">{Core Components}</p>
+<div class="example">
+	<p class="head">Example</p>
 
+	<p class="help">Button Normal</p>
+	<button class="rui-button">Cancel</button>
+	<button class="rui-button rui-button-primary">Save</button>
+	<button class="rui-button rui-button-danger">Delete</button>
+	<a href="#" class="rui-button">Link Button</a>
+	<br><br>
+	<p class="help">Button Small</p>
+	<button class="rui-button rui-button-sm">Cancel</button>
+	<button class="rui-button rui-button-primary rui-button-sm">Save</button>
+	<button class="rui-button rui-button-danger rui-button-sm">Delete</button>
+	<a href="#" class="rui-button rui-button-sm">Link Button</a>
+
+</div>
+<div class="example-code">
+<button class="copy-source">Copy</button>
+<pre><code class="html">
+//Normal buttons
+&lt;button class="rui-button"&gt;Cancel&lt;/button&gt;
+&lt;button class="rui-button rui-button-primary"&gt;Save&lt;/button&gt;
+&lt;button class="rui-button rui-button-danger"&gt;Delete&lt;/button&gt;
+&lt;a href="#" class="rui-button"&gt;Link Button&lt;/a&gt;
+
+//Small buttons
+&lt;button class="rui-button rui-button-sm"&gt;Cancel&lt;/button&gt;
+&lt;button class="rui-button rui-button-primary rui-button-sm"&gt;Save&lt;/button&gt;
+&lt;button class="rui-button rui-button-danger rui-button-sm"&gt;Delete&lt;/button&gt;
+&lt;a href="#" class="rui-button rui-button-sm"&gt;Link Button&lt;/a&gt;
+</code></pre>
+</div>
+<h3>Disabled state</h3>
+<div class="example">
+	<p class="head">Example</p>
+
+	<button class="rui-button" disabled="disabled">Cancel</button>
+	<button class="rui-button rui-button-primary" disabled="disabled">Primary</button>
+</div>
+<div class="example-code">
+<button class="copy-source">Copy</button>
+<pre><code class="html">
+&lt;button class="rui-button" disabled="disabled"&gt;Cancel&lt;/button&gt;
+&lt;button class="rui-button rui-button-primary" disabled="disabled"&gt;Primary&lt;/button&gt;
+</code></pre>
+</div>
+<h3>Disabled link buttons</h3>
+<div class="example">
+	<p class="head">Example</p>
+
+	<a href="#" class="rui-button disabled">Link Button</a>
+	<a href="#" class="rui-button rui-button-primary disabled">Link Button</a>
+</div>
+<div class="example-code">
+<button class="copy-source">Copy</button>
+<pre><code class="html">
+&lt;a href="#" class="rui-button disabled"&gt;Link Button&lt;/a&gt;
+&lt;a href="#" class="rui-button rui-button-primary disabled"&gt;Link Button&lt;/a&gt;
+</code></pre>
+</div>
+<h3>Block button</h3>
+<div class="example">
+	<p class="head">Example</p>
+	<button class="rui-button rui-button-primary button-block">Primary</button>
+	<button class="rui-button button-block">Cancel</button>
+</div>
+<div class="example-code">
+<button class="copy-source">Copy</button>
+<pre><code class="html">
+&lt;button class="rui-button rui-button-primary button-block"&gt;Primary&lt;/button&gt;
+&lt;button class="rui-button button-block"&gt;Cancel&lt;/button&gt;
+</code></pre>
+</div>
+<h3>Border only buttons</h3>
+<div class="example">
+	<p class="head">Example</p>
+
+	<button class="rui-button button-o">Cancel</button>
+	<button class="rui-button rui-button-primary button-o">Save</button>
+	<button class="rui-button rui-button-danger button-o">Delete</button>
+	<a href="#" class="rui-button button-o">Link Button</a>
+</div>
+<div class="example-code">
+<button class="copy-source">Copy</button>
+<pre><code class="html">
+&lt;button class="rui-button" disabled="disabled"&gt;Cancel&lt;/button&gt;
+&lt;button class="rui-button rui-button-primary" disabled="disabled"&gt;Primary&lt;/button&gt;
+</code></pre>
+</div>
 <script type="text/javascript" src="../lib/jquery/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="../lib/highlightjs/highlight.pack.js"></script>
 <script type="text/javascript" src="../../build/js/main.js"></script>
