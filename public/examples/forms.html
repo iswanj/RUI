@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RUI - Forms</title>
+	<link rel="stylesheet" type="text/css" href="../../build/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../lib/highlightjs/github.css">
+	<link rel="stylesheet" type="text/css" href="css/example.css">
+</head>
+<body>
+<h1>Forms</h1>
+<p>Forms are used to collect user inputs.</p>
+<p class="help">{Core Components}</p>
+<div class="example">
+	<p class="head">Example</p>
+	<form class="rui-form">
+		<div class="input-group">
+	        <label for="input-def">Default input
+	            <i class="material-icons">&#xE838;</i></label>
+	        <input class="text" type="text" id="input-def" name="input-def" placeholder="input placeholder">
+	        <div class="description">Your
+	            default width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-long">Long input</label>
+	        <input class="text long-input" type="text" id="input-long" name="input-long" placeholder="">
+	        <div class="description">Your
+	            long width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-medium">Medium input</label>
+	        <input class="text medium-input" type="text" id="input-medium" name="input-medium" placeholder="">
+	        <div class="error">Error message here</div>
+	        <div class="description">Your
+	            medium width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-short">Short input</label>
+	        <input class="text short-input" type="text" id="input-short" name="input-short" placeholder="">
+	        <div class="description">Your
+	            short width input.</div>
+	    </div>
+
+	    <h3>Textarea</h3>
+	    <div class="input-group">
+            <label for="textarea">Comment</label>
+            <textarea class="textarea" name="comment" id="textarea" placeholder="Your comment here..."></textarea>
+        </div>
+
+	    <h3>Dropdown and multi select</h3>
+	    <div class="input-group">
+		    <label for="select-example">Dropdown</label>
+		    <select class="select" id="select-example" name="select-example">
+	            <option>Select</option>
+	            <option>Option 1</option>
+	            <option>Option 2</option>
+	            <optgroup label="Group 1">
+	                <option>Option one</option>
+	                <option>Option two</option>
+	            </optgroup>
+	            <option>Option 3</option>
+	            <option>Option 4</option>
+	        </select>
+        </div>
+        <div class="input-group">
+		    <label for="multiple">Multi Select</label>
+		    <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+	            <option>option one</option>
+	            <option>option two</option>
+	            <option>option three</option>
+	            <option>option four</option>
+	            <option>option five</option>
+	            <option>option six</option>
+	        </select>
+        </div>
+        <h3>Radio buttons</h3>
+        <fieldset class="group">
+	        <legend><span>Radio
+	        buttons</span></legend>
+	        <div class="radio">
+	            <input class="radio" type="radio" checked="checked" name="radiobuttons" id="radioButtonOne">
+	            <label for="radioButtonOne">Save as a blog post</label>
+	        </div>
+	        <div class="radio">
+	            <input class="radio" type="radio" name="radiobuttons" id="radioButtonTwo">
+	            <label for="radioButtonTwo">Save as a page</label>
+	        </div>
+	        <div class="radio">
+	            <input class="radio" type="radio" name="radiobuttons" id="radioButtonThree">
+	            <label for="radioButtonThree">Save to your drafts</label>
+	        </div>
+	    </fieldset>
+	    <h3>Checkboxes</h3>
+	    <fieldset class="group">
+	        <legend><span>Checkboxes</span></legend>
+	        <div class="checkbox">
+	            <input class="checkbox" type="checkbox" name="checkBoxOne" id="checkBoxOne">
+	            <label for="checkBoxOne">Receive email</label>
+	        </div>
+	        <div class="checkbox">
+	            <input class="checkbox" type="checkbox" name="checkBoxTwo" id="checkBoxTwo">
+	            <label for="checkBoxTwo">Receive push notification</label>
+	        </div>
+	        <div class="checkbox">
+		        <input class="checkbox" type="checkbox" name="checkBoxThree" id="checkBoxThree">
+		        <label for="checkBoxThree">Receive in-app notification</label>
+	        </div>
+	    </fieldset>
+	    <h3>File Upload</h3>
+        <div class="input-group">
+            <label for="uploadFile">Upload file</label>
+            <input class="upfile" type="file" id="uploadFile" name="uploadFile" title="upload file">
+        </div>
+	</form>
+</div>
+<div class="example-code">
+	<button class="copy-source">Copy</button>
+	<div class="sscode">
+	<form class="rui-form">
+		// Inputs 
+		<div class="input-group">
+	        <label for="input-def">Default input
+	            <i class="material-icons">&#xE838;</i></label>
+	        <input class="text" type="text" id="input-def" name="input-def" placeholder="input placeholder">
+	        <div class="description">Your
+	            default width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-long">Long input</label>
+	        <input class="text long-input" type="text" id="input-long" name="input-long" placeholder="">
+	        <div class="description">Your
+	            long width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-medium">Medium input</label>
+	        <input class="text medium-input" type="text" id="input-medium" name="input-medium" placeholder="">
+	        <div class="error">Error message here</div>
+	        <div class="description">Your
+	            medium width input.</div>
+	    </div>
+	    <div class="input-group">
+	        <label for="input-short">Short input</label>
+	        <input class="text short-input" type="text" id="input-short" name="input-short" placeholder="">
+	        <div class="description">Your
+	            short width input.</div>
+	    </div>
+
+	    //Textarea
+	    <div class="input-group">
+            <label for="textarea">Comment</label>
+            <textarea class="textarea" name="comment" id="textarea" placeholder="Your comment here..."></textarea>
+        </div>
+
+	    //Dropdown and multi select
+	    <div class="input-group">
+		    <label for="select-example">Dropdown</label>
+		    <select class="select" id="select-example" name="select-example">
+	            <option>Select</option>
+	            <option>Option 1</option>
+	            <option>Option 2</option>
+	            <optgroup label="Group 1">
+	                <option>Option one</option>
+	                <option>Option two</option>
+	            </optgroup>
+	            <option>Option 3</option>
+	            <option>Option 4</option>
+	        </select>
+        </div>
+        <div class="input-group">
+		    <label for="multiple">Multi Select</label>
+		    <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+	            <option>option one</option>
+	            <option>option two</option>
+	            <option>option three</option>
+	            <option>option four</option>
+	            <option>option five</option>
+	            <option>option six</option>
+	        </select>
+        </div>
+        
+        //Radio buttons
+        <fieldset class="group">
+	        <legend><span>Radio
+	        buttons</span></legend>
+	        <div class="radio">
+	            <input class="radio" type="radio" checked="checked" name="radiobuttons" id="radioButtonOne">
+	            <label for="radioButtonOne">Save as a blog post</label>
+	        </div>
+	        <div class="radio">
+	            <input class="radio" type="radio" name="radiobuttons" id="radioButtonTwo">
+	            <label for="radioButtonTwo">Save as a page</label>
+	        </div>
+	        <div class="radio">
+	            <input class="radio" type="radio" name="radiobuttons" id="radioButtonThree">
+	            <label for="radioButtonThree">Save to your drafts</label>
+	        </div>
+	    </fieldset>
+	    
+	    //Checkboxes
+	    <fieldset class="group">
+	        <legend><span>Checkboxes</span></legend>
+	        <div class="checkbox">
+	            <input class="checkbox" type="checkbox" name="checkBoxOne" id="checkBoxOne">
+	            <label for="checkBoxOne">Receive email</label>
+	        </div>
+	        <div class="checkbox">
+	            <input class="checkbox" type="checkbox" name="checkBoxTwo" id="checkBoxTwo">
+	            <label for="checkBoxTwo">Receive push notification</label>
+	        </div>
+	        <div class="checkbox">
+		        <input class="checkbox" type="checkbox" name="checkBoxThree" id="checkBoxThree">
+		        <label for="checkBoxThree">Receive in-app notification</label>
+	        </div>
+	    </fieldset>
+	    
+	    //File Upload
+        <div class="input-group">
+            <label for="uploadFile">Upload file</label>
+            <input class="upfile" type="file" id="uploadFile" name="uploadFile" title="upload file">
+        </div>
+	</form>
+	</div>
+</div>
+<script type="text/javascript" src="../lib/jquery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../lib/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript" src="../lib/showdownjs/showdown.js"></script>
+<script type="text/javascript" src="../../build/js/main.js"></script>
+
+<script type="text/javascript" src="js/example.js"></script>
+</body>
+</html>
