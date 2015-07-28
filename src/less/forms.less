@@ -160,6 +160,20 @@
 			background-color: #fff;
 	    }
 	}
+
+	//Disabled input style
+	.radio[disabled], .text[disabled] {
+		cursor: not-allowed;
+	}
+	.multi-select[disabled], .password[disabled], .select[disabled], .text[disabled], .textarea[disabled] {
+		cursor: not-allowed;
+		background-color: @brand-default;
+		color: @sub-text;
+	}
+	.multi-select[disabled], .multi-select[disabled] optgroup, .multi-select[disabled] option {
+		background-color: @brand-default;
+		color: @sub-text;
+	}
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
