@@ -15,7 +15,9 @@
 	.rounded(@border-radius-base);
 	.button-variant(@btn-default-color, @btn-default-bg, @btn-default-border);
 	.button-size(@btn-padding-vertical, @btn-padding-horizontal, @btn-font-size-base, @btn-line-height-base, @border-radius-base);
-
+	&:link {
+		text-decoration: none;
+	}
 	&:active{
 		outline: 0;
 		background-image: none;

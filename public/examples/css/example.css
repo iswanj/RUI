@@ -25,6 +25,7 @@ code span {
 	margin-top: 1em;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+	overflow-y: auto;
 }
 .example p.head {
 	text-transform: uppercase;

@@ -92,3 +92,61 @@ var Sidebar = function Sidebar() {
 };
 
 var sidebar = new Sidebar();
+// Tabs functions
+'use strict';
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var Tab = (function () {
+	function Tab() {
+		_classCallCheck(this, Tab);
+
+		this.init();
+	}
+
+	_createClass(Tab, [{
+		key: 'unbindTabLink',
+		value: function unbindTabLink() {
+			$('.rui-nav li a').unbind('click');
+		}
+	}, {
+		key: 'resetActiveTab',
+		value: function resetActiveTab(el) {
+			el.closest('.rui-nav').children('li').each(function () {
+				$(this).children('a').removeClass('active');
+			});
+		}
+	}, {
+		key: 'resetAllTabpanes',
+		value: function resetAllTabpanes(el) {
+			el.closest('.rui-nav').next('.rui-tab-content').children('div').removeClass('active');
+		}
+	}, {
+		key: 'init',
+		value: function init() {
+			this.unbindTabLink();
+			$('.rui-nav li a').each(function () {
+				var thisEl = $(this);
+
+				thisEl.click(function (e) {
+					e.preventDefault();
+					tab.resetActiveTab(thisEl);
+					thisEl.addClass('active');
+
+					//remove active class form other tabs
+					tab.resetAllTabpanes(thisEl);
+
+					//enable related tab
+					var thisAttr = thisEl.attr('href');
+					$('' + thisAttr).addClass('active');
+				});
+			});
+		}
+	}]);
+
+	return Tab;
+})();
+
+var tab = new Tab();
