@@ -24,7 +24,7 @@ class Message {
 		$closeLink = $('<a></a>').attr('href','#').addClass('close').html('<i class="material-icons">&#xE5CD;</i>');
 
 		//handling close link button
-		$closeLink.click(function(e){
+		$closeLink.click(function(e) {
 			e.preventDefault();
 			$toast.remove();
 		});

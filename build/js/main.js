@@ -107,8 +107,8 @@ var Tab = (function () {
 	}
 
 	_createClass(Tab, [{
-		key: 'unbindTabLink',
-		value: function unbindTabLink() {
+		key: 'unbindTabLinks',
+		value: function unbindTabLinks() {
 			$('.rui-nav li a').unbind('click');
 		}
 	}, {
@@ -126,7 +126,7 @@ var Tab = (function () {
 	}, {
 		key: 'init',
 		value: function init() {
-			this.unbindTabLink();
+			this.unbindTabLinks();
 			$('.rui-nav li a').each(function () {
 				var thisEl = $(this);
 

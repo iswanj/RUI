@@ -3,12 +3,12 @@ class Tab {
 	constructor(){
 		this.init();
 	}
-	unbindTabLink(){
+	unbindTabLinks(){
 		$('.rui-nav li a').unbind('click');
 	}
 
 	resetActiveTab(el){
-		el.closest('.rui-nav').children('li').each(function(){
+		el.closest('.rui-nav').children('li').each(function() {
 			$(this).children('a').removeClass('active');
 		});
 	}
@@ -18,11 +18,11 @@ class Tab {
 	}
 
 	init(){
-		this.unbindTabLink();
-		$('.rui-nav li a').each(function(){
+		this.unbindTabLinks();
+		$('.rui-nav li a').each(function() {
 			let thisEl = $(this);
 
-			thisEl.click(function(e){
+			thisEl.click(function(e) {
 				e.preventDefault();
 				tab.resetActiveTab(thisEl);
 				thisEl.addClass('active');
