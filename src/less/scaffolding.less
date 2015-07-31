@@ -31,6 +31,10 @@ p {
   font-size: .85em;
 }
 
+em {
+  font-style: italic;
+}
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -46,17 +50,16 @@ textarea {
 
 a {
     &:link, &:visited {
-    color: @brand-primary-dark;
-    text-decoration: none;
+    color: @brand-dark;
+    text-decoration: underline;
     }
 
     &:hover, &:active,
     &:focus {
-        color: @brand-dark;
-        text-decoration: underline;
+        color: @brand-primary;
+        text-decoration: none;
     }
 }
-
 
 // Images
 
