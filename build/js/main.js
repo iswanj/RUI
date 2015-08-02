@@ -1,3 +1,82 @@
+//dialog (Modal)
+'use strict';
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var Dialog = (function () {
+	function Dialog(selector) {
+		_classCallCheck(this, Dialog);
+
+		this.Overlay;
+		this.el = $(selector);
+	}
+
+	_createClass(Dialog, [{
+		key: 'unbindEvent',
+		value: function unbindEvent() {
+			$('.close').unbind('click');
+			$('.rui-overlay').unbind('click');
+		}
+	}, {
+		key: 'initEvent',
+		value: function initEvent() {
+			var _this = this;
+
+			var hideFunc = function hideFunc() {
+				return _this.hide();
+			};
+			$('.close').each(function () {
+				$(this).click(function (e) {
+					e.preventDefault();
+					hideFunc();
+				});
+			});
+
+			$('.rui-overlay').on('click', function (e) {
+				e.preventDefault();
+				hideFunc();
+			});
+
+			$('.rui-overlay div').click(function (e) {
+				e.stopPropagation();
+			});
+		}
+
+		//show dialog
+	}, {
+		key: 'show',
+		value: function show() {
+			this.el.children('.dialog-content').css({
+				left: this.leftPos,
+				top: '4em'
+			});
+			this.el.addClass('rui-overlay');
+			this.el.fadeIn('fast');
+			this.initEvent();
+			$('body').addClass('dialog-open');
+		}
+
+		//hide dialog
+	}, {
+		key: 'hide',
+		value: function hide() {
+			this.unbindEvent();
+			this.el.fadeOut('fast', function () {
+				$(this).removeClass('rui-overlay');
+			});
+
+			$('body').removeClass('dialog-open');
+		}
+	}]);
+
+	return Dialog;
+})();
+
+var dialog = function dialog(selector) {
+	return new Dialog(selector);
+};
 // message js
 'use strict';
 
@@ -19,15 +98,15 @@ var Message = (function () {
 		}
 	}, {
 		key: 'toaster',
-		value: function toaster(option) {
+		value: function toaster(options) {
 			var icon = undefined;
 			var $toast = undefined;
 			var $closeLink = undefined;
 			var $ruiMsg = undefined;
-			var title = option.title;
-			var body = option.body;
-			var type = option.type;
-			var autoClose = option.autoClose;
+			var title = options.title;
+			var body = options.body;
+			var type = options.type;
+			var autoClose = options.autoClose;
 
 			//clear all toasters
 			this.clearToasters();

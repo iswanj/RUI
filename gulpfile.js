@@ -1,4 +1,5 @@
 // Include gulp
+
 var gulp = require('gulp');
  // Define base folders
 var src = 'src/';
@@ -46,4 +47,4 @@ gulp.task('watch', function() {
  });
 
  // Default Task
-gulp.task('default', ['scripts', 'less', 'images', 'watch']);
+gulp.task('default', ['scripts','less', 'images', 'watch']);

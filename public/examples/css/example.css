@@ -8,7 +8,7 @@ code {
 	padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
-    background-color: #f9f2f4;
+    background-color: #f5f5f5;
     border-radius: 4px;
 }
 code span {
@@ -16,7 +16,7 @@ code span {
 }
 
 .example {
-	border: 1px solid #eceff1;
+	border: 1px solid #f5f5f5;
 	border-radius: 4px;
 	padding: 1em;
 	margin-top: 1em;
@@ -27,7 +27,7 @@ code span {
 .example p.head {
 	text-transform: uppercase;
 	font-size: 14px;
-	color: #607d8b;
+	color: #6A7387;
 	margin-bottom: 1em;
 }
 .example-code {

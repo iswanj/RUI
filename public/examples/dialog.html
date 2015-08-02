@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RUI - Dialog</title>
+	<link rel="stylesheet" type="text/css" href="../../build/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../lib/highlightjs/github.css">
+	<link rel="stylesheet" type="text/css" href="css/example.css">
+</head>
+<body>
+<h1>Dialogs</h1>
+<p class="help">{Core Components}</p>
+<p class="help"><strong>Required </strong>: JQuery</p>
+<div class="example">
+	<p class="head">Example</p>
+	<button class="rui-button rui-button-primary" id="showDialog">Show Dialog</button> &nbsp;
+	<button class="rui-button rui-button-danger button-o" id="showWarningDialog">Show Warning Dialog</button>
+</div>
+
+<div class="rui-dialog rui-overlay" data-role="dialog" id="my-dialog">
+	<div class="dialog-content dialog-medium">
+		<div class="dialog-header">
+			<h3>Dialog title</h3>
+			<a href="#" class="close"><i class="material-icons">&#xE14C;</i></a>
+		</div>
+		<div class="dialog-body">
+			Dialog body
+		</div>
+		<div class="dialog-footer">
+			<button class="rui-button right close">Close</button>
+		</div>
+	</div>
+</div>
+<div class="rui-dialog rui-overlay" data-role="dialog" id="my-dialog2">
+	<div class="dialog-content dialog-small">
+		<div class="dialog-header dialog-warning">
+			<h3>Dialog title</h3>
+			<a href="#" class="close"><i class="material-icons">&#xE14C;</i></a>
+		</div>
+		<div class="dialog-body">
+			Dialog body
+		</div>
+		<div class="dialog-footer">
+			<button class="rui-button right close">Close</button>
+		</div>
+	</div>
+</div>
+<div class="example-code">
+	<div class="sscode">
+	<!-- Buttons for Dialog -->
+	<button class="rui-button rui-button-primary" id="showDialog">Show Dialog</button> &nbsp;
+	<button class="rui-button rui-button-danger button-o" id="showWarningDialog">Show Warning Dialog</button>
+
+	<!-- Dialog Default -->
+	<div class="rui-dialog rui-overlay" data-role="dialog" id="my-dialog">
+		<div class="dialog-content dialog-medium">
+			<div class="dialog-header">
+				<h3>Dialog title</h3>
+				<a href="#" class="close"><i class="material-icons">&#xE14C;</i></a>
+			</div>
+			<div class="dialog-body">
+				Dialog body
+			</div>
+			<div class="dialog-footer">
+				<button class="rui-button right close">Close</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Dialog warning  -->
+	<div class="rui-dialog rui-overlay" data-role="dialog" id="my-dialog2">
+		<div class="dialog-content dialog-small">
+			<div class="dialog-header dialog-warning">
+				<h3>Dialog title</h3>
+				<a href="#" class="close"><i class="material-icons">&#xE14C;</i></a>
+			</div>
+			<div class="dialog-body">
+				Dialog body
+			</div>
+			<div class="dialog-footer">
+				<button class="rui-button right close">Close</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="sscode">
+	//Call to open modal in Javascript
+	$(document).ready(function(){
+		$('#showDialog').on('click', function(){
+			dialog('#my-dialog').show();
+		});
+		$('#showWarningDialog').on('click', function(){
+			dialog('#my-dialog2').show();
+		});
+	});
+	</div>
+</div>
+<script type="text/javascript" src="../lib/jquery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../lib/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript" src="../lib/showdownjs/showdown.js"></script>
+<script type="text/javascript" src="js/browser-polyfill.min.js"></script>
+<script type="text/javascript" src="../../build/js/main.js"></script>
+<script type="text/javascript" src="js/example.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#showDialog').on('click', function(){
+			dialog('#my-dialog').show();
+		});
+		$('#showWarningDialog').on('click', function(){
+			dialog('#my-dialog2').show();
+		});
+	});
+</script>
+</body>
+</html>

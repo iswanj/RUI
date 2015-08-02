@@ -5,15 +5,15 @@ class Message {
 		$('.rui-toaster').remove();
 	}
 
-	toaster(option){
+	toaster(options){
 		let icon;
 		let $toast;
 		let $closeLink;
 		let $ruiMsg;
-		const title = option.title;
-		const body = option.body;
-		const type = option.type;
-		const autoClose= option.autoClose;
+		const title = options.title;
+		const body = options.body;
+		const type = options.type;
+		const autoClose= options.autoClose;
 
 		//clear all toasters
 		this.clearToasters();
