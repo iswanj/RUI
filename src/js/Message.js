@@ -10,10 +10,10 @@ class Message {
 		let $toast;
 		let $closeLink;
 		let $ruiMsg;
-		const title = options.title;
-		const body = options.body;
-		const type = options.type;
-		const autoClose= options.autoClose;
+		const title = (options.title != '' ? options.title : "Message titlle");
+		const body = (options.body != '' ? options.body : "Message titlle");
+		const type = (options.type != '' ? options.type : "");
+		const autoClose= (options.autoClose != '' ? options.autoClose : "Message titlle");
 
 		//clear all toasters
 		this.clearToasters();

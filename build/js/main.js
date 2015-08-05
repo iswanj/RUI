@@ -103,10 +103,10 @@ var Message = (function () {
 			var $toast = undefined;
 			var $closeLink = undefined;
 			var $ruiMsg = undefined;
-			var title = options.title;
-			var body = options.body;
-			var type = options.type;
-			var autoClose = options.autoClose;
+			var title = options.title != '' ? options.title : "Message titlle";
+			var body = options.body != '' ? options.body : "Message titlle";
+			var type = options.type != '' ? options.type : "";
+			var autoClose = options.autoClose != '' ? options.autoClose : "Message titlle";
 
 			//clear all toasters
 			this.clearToasters();

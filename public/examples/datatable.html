@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RUI - Data Table</title>
+	<link rel="stylesheet" type="text/css" href="../../build/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../lib/highlightjs/github.css">
+	<link rel="stylesheet" type="text/css" href="css/example.css">
+	<link rel="stylesheet" type="text/css" href="fonts/style.css">
+	<link rel="stylesheet" type="text/css" href="../lib/datatable/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="../lib/datatable/dataTables.custom.css">
+
+</head>
+<body>
+<h1>Datatable</h1>
+<div class="example">
+	<p class="head">Example</p>
+	<table id="table_id" class="display">
+	    <thead>
+	        <tr>
+	            <th>Column 1</th>
+	            <th>Column 2</th>
+	            <th>Column 3</th>
+	            <th>Column 4</th>
+	            <th>Column 5</th>
+	            <th>Column 6</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>Row 1 Data 1</td>
+	            <td>Row 1 Data 2</td>
+	            <td>Row 1 Data 3</td>
+	            <td>Row 1 Data 4</td>
+	            <td>Row 1 Data 5</td>
+	            <td>Row 1 Data 6</td>
+	        </tr>
+	        <tr>
+	            <td>Row 2 Data 1</td>
+	            <td>Row 2 Data 2</td>
+	            <td>Row 2 Data 3</td>
+	            <td>Row 2 Data 4</td>
+	            <td>Row 2 Data 5</td>
+	            <td>Row 2 Data 6</td>
+	        </tr>
+	        <tr>
+	            <td>Row 3 Data 1</td>
+	            <td>Row 3 Data 2</td>
+	            <td>Row 3 Data 3</td>
+	            <td>Row 3 Data 4</td>
+	            <td>Row 3 Data 5</td>
+	            <td>Row 3 Data 6</td>
+	        </tr>
+	        <tr>
+	            <td>Row 4 Data 1</td>
+	            <td>Row 4 Data 2</td>
+	            <td>Row 4 Data 3</td>
+	            <td>Row 4 Data 4</td>
+	            <td>Row 4 Data 5</td>
+	            <td>Row 4 Data 6</td>
+	        </tr>
+	        <tr>
+	            <td>Row 5 Data 1</td>
+	            <td>Row 5 Data 2</td>
+	            <td>Row 5 Data 3</td>
+	            <td>Row 5 Data 4</td>
+	            <td>Row 5 Data 5</td>
+	            <td>Row 5 Data 6</td>
+	        </tr>
+	        <tr>
+	            <td>Row 6 Data 1</td>
+	            <td>Row 6 Data 2</td>
+	            <td>Row 6 Data 3</td>
+	            <td>Row 6 Data 4</td>
+	            <td>Row 6 Data 5</td>
+	            <td>Row 6 Data 6</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+<script type="text/javascript" src="../lib/jquery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../lib/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript" src="../lib/showdownjs/showdown.js"></script>
+<script type="text/javascript" src="../lib/datatable/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../lib/datatable/dataTables.custom.js"></script>
+<script type="text/javascript" src="../../build/js/main.js"></script>
+<script type="text/javascript" src="js/example.js"></script>
+<script type="text/javascript">
+	$(document).ready( function () {
+	    $('#table_id').DataTable();
+
+	    $('#table_id')
+		.removeClass( 'display' )
+		.addClass('table table-striped table-bordered');
+
+		$('.pagination li').removeClass('paginate_button');
+	});
+</script>
+</body>
+</html>
