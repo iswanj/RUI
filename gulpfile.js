@@ -16,8 +16,8 @@ var cache = require('gulp-cache');
  // Convert ES6 to ES5, Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src(src + 'js/*.js')
-      .pipe(babel())
       .pipe(concat('main.js'))
+      .pipe(babel())
       //.pipe(uglify())
       .pipe(gulp.dest(dest + 'js'));
 });
