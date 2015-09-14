@@ -103,7 +103,20 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#showDialog').on('click', function(){
-			dialog('#my-dialog').show();
+			dialog('#my-dialog').show({
+				beforeOpen: function(){
+					alert('before open');
+				},
+				afterOpen: function(){
+					alert('after opened');
+				},
+				beforeClose: function(){
+					alert('before close');
+				},
+				afterClose: function(){
+					alert('after close')
+				}
+			});
 		});
 		$('#showWarningDialog').on('click', function(){
 			dialog('#my-dialog2').show();

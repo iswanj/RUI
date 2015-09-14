@@ -11,6 +11,10 @@ var Dialog = (function () {
 
 		this.Overlay;
 		this.el = $(selector);
+		this.afterClose = null;
+		this.beforeClose = null;
+		this.afterOpen = null;
+		this.beforeOpen = null;
 	}
 
 	_createClass(Dialog, [{
@@ -47,13 +51,24 @@ var Dialog = (function () {
 		//show dialog
 	}, {
 		key: 'show',
-		value: function show() {
+		value: function show(options) {
+			var _this2 = this;
+
+			//handle dialog optional functions
+			this.afterClose = options && options.afterClose;
+			this.beforeClose = options && options.beforeClose;
+			this.afterOpen = options && options.afterOpen;
+			this.beforeOpen = options && options.beforeOpen;
+
 			this.el.children('.dialog-content').css({
 				left: this.leftPos,
 				top: '4em'
 			});
 			this.el.addClass('rui-overlay');
-			this.el.fadeIn('fast');
+			this.beforeOpen != null && this.beforeOpen();
+			this.el.fadeIn('fast', function () {
+				_this2.afterOpen != null && _this2.afterOpen();
+			});
 			this.initEvent();
 			$('body').addClass('dialog-open');
 		}
@@ -62,9 +77,13 @@ var Dialog = (function () {
 	}, {
 		key: 'hide',
 		value: function hide() {
+			var _this3 = this;
+
+			this.beforeClose != null && this.beforeClose();
 			this.unbindEvent();
 			this.el.fadeOut('fast', function () {
-				$(this).removeClass('rui-overlay');
+				$(_this3).removeClass('rui-overlay');
+				_this3.afterClose != null && _this3.afterClose();
 			});
 
 			$('body').removeClass('dialog-open');
